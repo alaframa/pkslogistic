@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>PT PKS Logistik - Jasa Kirim Mobil & Alat Berat Terpercaya</title>
+    <meta name="description" content="PT PKS Logistik (@ayokirimmobil) - Jasa pengiriman mobil, motor, dan alat berat via Car Carrier & Kapal RORO ke seluruh Indonesia. Aman, cepat, dan bergaransi sejak 2008.">
+    <meta name="keywords" content="jasa kirim mobil, kirim mobil antar pulau, pks logistik, kapal roro, car carrier, kirim alat berat, ayokirimmobil, jakarta, palembang, bengkulu, balikpapan">
+    <meta name="author" content="PT PKS Logistik">
+
+    <style>
+        /* --- 1. Global Reset & Variables --- */
+        :root {
+            --primary-color: #0d47a1; /* Corporate Blue */
+            --secondary-color: #f5f5f5; /* Light Grey BG */
+            --dark-color: #333;
+            --light-color: #fff;
+            --cta-whatsapp: #25D366;
+            --cta-phone: #f06423; /* CTA Orange/Phone */
+            --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-main);
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: var(--light-color);
+        }
+
+        /* --- 2. Utility Classes --- */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-light {
+            background-color: var(--light-color);
+        }
+
+        .section-dark {
+            background-color: var(--secondary-color);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+        }
+
+        /* --- 3. Buttons (CTAs) --- */
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: var(--light-color);
+            border-radius: 5px;
+            transition: opacity 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+        }
+        
+        .btn-cta {
+            background-color: var(--cta-phone);
+        }
+
+        .btn:hover {
+            opacity: 0.85;
+        }
+
+        /* --- 4. Header & Navigation --- */
+        #main-header {
+            background: var(--light-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        #main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #main-header .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        #main-header nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        #main-header nav ul li {
+            margin-left: 25px;
+        }
+
+        #main-header nav ul li a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        #main-header nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        /* --- 5. Hero Section --- */
+        #hero {
+            background-color: var(--secondary-color);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        #hero h1 {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        #hero p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        /* --- 6. Services Section --- */
+        .services-grid {
+            display: flex;
+            justify-content: space-around;
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--light-color);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            flex: 1;
+            border-top: 5px solid var(--primary-color);
+        }
+
+        .service-card .icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        /* --- 7. Why Choose Us Section --- */
+        .benefits-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            background: var(--light-color);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            flex-basis: 48%;
+            min-width: 300px;
+        }
+
+        .benefit-item .icon {
+            font-size: 2.5rem;
+            margin-right: 20px;
+            color: var(--primary-color);
+        }
+
+        .benefit-item h3 {
+            font-size: 1.25rem;
+            margin-bottom: 5px;
+        }
+
+        /* --- 8. Contact & Form Section --- */
+        .contact-container {
+            display: flex;
+            gap: 40px;
+        }
+
+        .contact-info, .contact-form {
+            flex: 1;
+        }
+
+        .contact-info p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta-buttons .btn {
+            display: block;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .btn-whatsapp { background-color: var(--cta-whatsapp); }
+        .btn-phone { background-color: var(--cta-phone); }
+        .btn-email { background-color: var(--primary-color); }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: var(--font-main);
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        /* --- 9. Footer --- */
+        #main-footer {
+            background: var(--primary-color);
+            color: var(--light-color);
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        #main-footer p {
+            font-size: 0.9rem;
+        }
+
+        /* --- 10. Mobile Responsiveness --- */
+        @media (max-width: 768px) {
+            #main-header .container {
+                flex-direction: column;
+            }
+            #main-header .logo {
+                margin-bottom: 10px;
+            }
+            #main-header nav ul {
+                padding: 0;
+                justify-content: center;
+            }
+            #main-header nav ul li {
+                margin: 0 10px;
+            }
+
+            #hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .services-grid {
+                flex-direction: column;
+            }
+
+            .contact-container {
+                flex-direction: column;
+            }
+
+            .benefit-item {
+                flex-basis: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="container">
+            <a href="#" class="logo">[PT PKS LOGISTIK]</a>
+
+            <nav>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#services">Layanan</a></li>
+                    <li><a href="#why-us">Mengapa Kami</a></li>
+                    <li><a href="#contact">Pesan Sekarang</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <h1>Jasa Pengiriman Kendaraan & Alat Berat Profesional</h1>
+                <p>Aman, Cepat, dan Bergaransi ke Seluruh Indonesia Sejak 2008.</p>
+                <a href="#contact" class="btn btn-cta">Dapatkan Penawaran Gratis</a>
+            </div>
+        </section>
+
+        <section id="services" class="section section-light">
+            <div class="container">
+                <h2 class="section-title">Layanan Kami</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="icon">🚛</div>
+                        <h3>Car Carrier</h3>
+                        <p>Pengiriman mobil antar kota dan pulau via darat menggunakan truk car carrier yang aman dan efisien.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">🚢</div>
+                        <h3>Kapal RORO</h3>
+                        <p>Solusi hemat biaya untuk pengiriman kendaraan (mobil, truk, motor) antar pulau dengan sistem Roll-on/Roll-off.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">🏗️</div>
+                        <h3>Alat Berat</h3>
+                        <p>Pengiriman profesional untuk Excavator, Bulldozer, ADT, dan alat berat lainnya ke lokasi proyek Anda di seluruh Indonesia.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-us" class="section section-dark">
+            <div class="container">
+                <h2 class="section-title">Mengapa Memilih PT PKS Logistik?</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div class="icon">🛡️</div>
+                        <div>
+                            <h3>Aman & Bergaransi</h3>
+                            <p>Kami memberikan jaminan asuransi resmi untuk setiap pengiriman.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="icon">⏱️</div>
+                        <div>
+                            <h3>Berpengalaman (Sejak 2008)</h3>
+                            <p>Tim profesional kami telah melayani ribuan pelanggan dengan sukses.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="icon">🏠</div>
+                        <div>
+                            <h3>Layanan Door to Door</h3>
+                            <p>Kami jemput kendaraan di lokasi Anda dan antar langsung ke tujuan.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="icon">💸</div>
+                        <div>
+                            <h3>Harga Transparan</h3>
+                            <p>Biaya kompetitif dan transparan tanpa ada biaya tersembunyi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section section-light">
+            <div class="container">
+                <h2 class="section-title">Pesan Sekarang</h2>
+                <div class="contact-container">
+                    
+                    <div class="contact-info">
+                        <h3>Hubungi Kami Langsung</h3>
+                        <p>Dapatkan respon cepat untuk konsultasi atau pemesanan darurat melalui tombol di bawah ini.</p>
+                        
+                        <a href="https://wa.me/62812XXXX" target="_blank" class="btn btn-whatsapp">
+                            Chat via WhatsApp
+                        </a>
+                        
+                        <a href="tel:+62812XXXX" class="btn btn-phone">
+                            Telepon Kami
+                        </a>
+                        
+                        <a href="mailto:info@pks-logistik.com" class="btn btn-email">
+                            Kirim Email
+                        </a>
+                    </div>
+
+                    <div class="contact-form">
+                        <h3>Atau, Isi Form Penawaran</h3>
+                        <p>Isi data di bawah ini dan tim kami akan segera menghubungi Anda dengan penawaran harga.</p>
+                        
+                        <form id="order-form" action="https://formspree.io/f/YOUR_UNIQUE_ID" method="POST">
+                            <div class="form-group">
+                                <label for="name">Nama Lengkap:</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">No. HP / WhatsApp:</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="vehicle_type">Jenis Kendaraan:</label>
+                                <input type="text" id="vehicle_type" name="Jenis Kendaraan" placeholder="Contoh: Toyota Avanza, Excavator PC200">
+                            </div>
+                            <div class="form-group">
+                                <label for="origin">Kota Asal (Origin):</label>
+                                <input type="text" id="origin" name="Kota Asal" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="destination">Kota Tujuan (Destination):</label>
+                                <input type="text" id="destination" name="Kota Tujuan" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Pesan Tambahan:</label>
+                                <textarea id="message" name="message" placeholder="Ada permintaan khusus? (Opsional)"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Kirim Permintaan Penawaran</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="main-footer">
+        <div class="container">
+            <p>&copy; 2025 PT. Pelabuhan Kita Satu (PKS Logistik). All Rights Reserved.</p>
+            <p>Website by [Your Name/Company Here]</p>
+        </div>
+    </footer>
+
+</body>
+</html>
